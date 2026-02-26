@@ -2,7 +2,9 @@ from pyspark import pipelines as dp
 from pyspark.sql.functions import col, current_timestamp
 from pyspark.sql.functions import md5, concat_ws, sha2
 
-SOURCE_PATH="dbfs:/Volumes/workspace/dbricks/db/csv/transport/data/city/"
+#SOURCE_PATH="dbfs:/Volumes/workspace/dbricks/db/csv/transport/data/city/"
+SOURCE_PATH="dbfs:/Volumes/transportation/transportation_data/transportation/data/city"
+# Destination in catalog PATH="transportation.bronze.city"
 
 
 @dp.materialized_view(
